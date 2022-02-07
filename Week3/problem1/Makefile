@@ -1,12 +1,12 @@
 CC=g++
 CFLAGS=-I.
 DEPS = solution1.h 
-OBJ = problem1.o solution1.o
+OBJ = main.o solution1.o
 
 %.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
-problem1: $(OBJ)
+main: $(OBJ)
 	$(CC) -o $@ $^ $(CFLAGS)
 
 .PHONY: clean
