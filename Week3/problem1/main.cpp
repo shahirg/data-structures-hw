@@ -17,7 +17,7 @@ int main() {
     Solution s;
     vector<int> out = s.inorderTraversal(tree);
     for (int i = 0; i < out.size(); i++) {
-        cout << out.at(i) << "\n";
+        cout << out.at(i) << endl;
     }
 
 
