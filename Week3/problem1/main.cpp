@@ -20,6 +20,7 @@ int main() {
         cout << out.at(i) << endl;
     }
 
+    delete tree;
 
     return 0;
 }
