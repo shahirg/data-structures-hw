@@ -1,7 +1,7 @@
 CC=g++
 CFLAGS=-I.
-DEPS = solution.h 
-OBJ = main.o solution.o
+DEPS = FreqStack.h 
+OBJ = main.o FreqStack.o
 
 %.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)

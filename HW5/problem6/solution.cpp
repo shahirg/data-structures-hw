@@ -16,15 +16,15 @@ vector<string> Solution::findAllConcatenatedWordsInADict(vector<string>& words) 
     int index;
     for (int i = 0; i < words.size(); i++) {
         temp = words.at(i);
-        std::cout << temp << std::endl;
+        // std::cout << temp << std::endl;
         for (int j = i + 1; j < words.size(); j++) {
-            std::cout << "test" << std::endl;
+            // std::cout << "test" << std::endl;
             *temp2 = words.at(j);
-            std::cout << temp << std::endl;
+            // std::cout << temp << std::endl;
             while ((index = (temp).find(*temp2)) != string::npos) {
                 // reformat string
                 temp.erase(index, (*temp2).length());
-                std::cout << temp << std::endl;
+                // std::cout << temp << std::endl;
             }
         }
         if (temp.length() == 0) {
