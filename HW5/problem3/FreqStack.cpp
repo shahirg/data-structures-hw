@@ -1,5 +1,5 @@
 #include "FreqStack.hpp"
-#include <iostream>
+
 FreqStack::FreqStack() {
     // hashtable for frequency
     // freqstk for keeping track of frequency
