@@ -1,10 +1,11 @@
 #include "solution.hpp"
 #include <vector>
+#include <climits>
 using std::vector;
 int Solution::gcd(vector<int> list) {
     // get min & max O(n)
-    int min = INT_MIN;
-    int max = INT_MAX;
+    int min = INT_MAX;
+    int max = INT_MIN;
     for (int i : list) {
         if (i < min)
             min = i;
@@ -12,9 +13,10 @@ int Solution::gcd(vector<int> list) {
             max = i;
     }
 
-    for (int i = min; i > 0; i++) {
-        if (min % i == 0 && max % i == 0)
-            return i;
-    }
-    return 1;
+    return gcd(max, min);
+}
+int Solution::gcd(int x, int y) {
+    if (x == 0)
+        return y;
+    return gcd(y % x, x);
 }
